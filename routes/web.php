@@ -2,10 +2,9 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BarrioController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [BarrioController::class, 'index'])->name('barrios.index');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
